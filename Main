@@ -1,0 +1,23 @@
+pacote  padraoFactory ;
+
+import  padraoStrategy . Produto ;
+
+
+ classe  pública Principal {
+
+    public  static  void  main ( String [] args ) {
+        
+        Produto  console = new  Produto ( "Lalystation 5" , 500 , CalculoFactory . criarCalculo ( "FIXO" ));
+        consola . calcularPrecoFinal ();
+        Sistema . fora . println ( console );
+        
+        consola . trocarDeEstrategia ( CalculoFactory . criarCalculo ( "PREJUIZO" ));
+        consola . calcularPrecoFinal ();
+        Sistema . fora . println ( console );
+        
+        consola . trocarDeEstrategia ( CalculoFactory . criarCalculo ( "LUCRO" ));
+        consola . calcularPrecoFinal ();
+        Sistema . fora . println ( console );
+        
+    }
+}
